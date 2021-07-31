@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     max-width: fit-content;
 }
@@ -15,9 +15,9 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
-    max-width: 75%;
+    max-width: 100%;
 }
 
 .forecast {
@@ -25,4 +25,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: fit-content;
+}
+
+.card {
+    height: 240px;
+    width: 200px;
+    padding: 5px;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
 }
