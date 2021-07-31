@@ -1,5 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: aquamarine;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .search-bar {
@@ -14,11 +24,14 @@ body {
 .current-weather {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: end;
     align-items: center;
+    width: 500px;
     max-width: 100%;
+    padding: 10px;
 }
+
 
 .forecast {
     display: flex;
