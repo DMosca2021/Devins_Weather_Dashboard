@@ -11,99 +11,57 @@
 <body>
 
     <header class="title-banner">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h1 class="display-4">Weather Dashboard</h1>
-                <p class="lead">Use the search bar to get a city's current weather and 5 day forecast.</p>
-            </div>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Weather Dashboard</h1>
+            <p class="lead">Use the search bar to get a city's current weather and 5 day forecast.</p>
         </div>
+      </div>
     </header>
 
     <main>
 
-        <section class="search-bar">
-            <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search for a city." aria-label="city-search" aria-describedby="button-addon2">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        <section class="search">
+          <div class="row">
+            <div class="col-4 bg-light">
+                <p class="search-header my-1">Search for a city</p>
+                <div class="input-group mb-3">
+                    <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="button" id="search-button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
-              </div>
+                <button class="btn btn-primary mb-3" type="button" id="clear-history">Clear history</button>
+                <form id="history"></form>
         </section>
 
         <section class="current-weather">
             <div class="jumbotron">
-                <h1 class="display-4">Current City:</h1>
-                <p>Temperature:</p>
+                <h1 class="display-4" id="city-name">Current City:</h1>
+                <p id="temp">Temperature:</p>
                 <hr class="my-4">
-                <p>Wind Speed:</p>
+                <p id="wind-speed">Wind Speed:</p>
                 <hr class="my-4">
-                <p>Humidity:</p>
+                <p id="humidity">Humidity:</p>
                 <hr class="my-4">
-                <p>UV Index:</p>
+                <p id="uvIndex">UV Index:</p>
                 <a class="btn btn-primary btn-lg" href="#" role="button">Refresh</a>
               </div>
         </section>
 
-        <section class="forecast">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Day1</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Temp:</li>
-                  <li class="list-group-item">Wind:</li>
-                  <li class="list-group-item">Humidity:</li>
-                </ul>
-              </div>
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Day2</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Temp:</li>
-                  <li class="list-group-item">Wind:</li>
-                  <li class="list-group-item">Humidity:</li>
-                </ul>
-              </div>
-
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Day 3</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Temp:</li>
-                  <li class="list-group-item">Wind:</li>
-                  <li class="list-group-item">Humidity:</li>
-                </ul>
-              </div>
-
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Day 4</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Temp:</li>
-                  <li class="list-group-item">Wind:</li>
-                  <li class="list-group-item">Humidity:</li>
-                </ul>
-              </div>
-
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Day 5</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                  <li class="list-group-item">Temp:</li>
-                  <li class="list-group-item">Wind:</li>
-                  <li class="list-group-item">Humidity:</li>
-                </ul>
-              </div>
-
+        <section class="row">
+          <div class="col-12">
+            <h3>5-Day Forecast</h3>
+          </div>
+          <div class="row">
+            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+            <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+          </div>
         </section>
     </main>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
