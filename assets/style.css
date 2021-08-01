@@ -10,6 +10,7 @@ main {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .search-bar {
@@ -17,19 +18,19 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: start;
-    align-items: center;
+    align-items: flex-start;
     max-width: fit-content;
+    margin-left: 30px;
 }
 
 .current-weather {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: end;
     align-items: center;
-    width: 500px;
     max-width: 100%;
     padding: 10px;
+    margin-right: 30px;
 }
 
 
@@ -46,5 +47,4 @@ main {
     padding: 5px;
     margin: 5px;
     justify-content: center;
-    align-items: center;
 }
