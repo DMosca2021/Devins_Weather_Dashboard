@@ -1,17 +1,18 @@
 # Devin's Weather Dashboard
 
-## Task
-Your Task
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+## Description
 
-Use the OpenWeather One Call API to retrieve weather data for cities. Read through the documentation for setup and usage instructions. You will use localStorage to store any persistent data. For more information on how to work with the OpenWeather API, refer to the Full-Stack Blog on how to use API keys.
+The goal of this homework assignment was to showcase my knowledge of server side API's. I was able to fetch data from Open Weathers API and use that to display current weather conditions for a searched city. These skills will provide useful when making dynamic web applications. 
 
 ## User Story
+```md
 AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
+```
 
 ## Tasks Completed
+
 - WHEN I search for a city
 - THEN I am presented with current and future conditions for that city and that city is added to the search history
 - WHEN I view current weather conditions for that city
@@ -33,3 +34,10 @@ Links to access the weather dashboard:
 Click on deployed link. Once at the weather dashboard, input a city name into the search bar to recieve the current weather data and 5 day forecast. 
 
 ![Screenshot](./assets/images/weatherDash_scrnsht.png)
+
+## Credits
+Credit for this project goes to my instructor, teachers assistant, tutor, and fellow students in the DUbootcamp who provided the information and resources I needed to complete this task.
+
+- [Open Weather API](https://openweathermap.org/)
+- [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+- [Google](https://www.google.com/)
