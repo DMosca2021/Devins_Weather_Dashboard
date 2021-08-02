@@ -83,6 +83,7 @@ function searchWeather(cityName) {
         })
 };
 
+// Takes input from search field, starts searchWeather function when button is clicked to search given input.
 searchBtn.addEventListener("click", function() {
     let searchedCity = inputEl.value;
     searchWeather(searchedCity);
@@ -91,15 +92,18 @@ searchBtn.addEventListener("click", function() {
     showSearchHist();
 });
 
+// Clears search history list
 clearHist.addEventListener("click", function() {
     searchHist = [];
     showSearchHist();
 });
 
+// Function to convert temp to Fahrenheit
 function convertTemp(x) {
     return Math.floor((x - 273.15) * 1.8 + 32);
 };
 
+// Function to add search history to list under search bar
 function showSearchHist() {
     histEL.innerHTML = "";
     for (let index = 0; index < searchHist.length; index++) {
