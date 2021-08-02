@@ -2,50 +2,23 @@
     box-sizing: border-box;
 }
 
-/* body {
+body {
     background-color: aquamarine;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+ .navbar-brand {
+    font-size: 36px;
 }
 
 .search-bar {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: start;
-    align-items: flex-start;
-    max-width: fit-content;
-    margin-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.current-weather {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
-    max-width: 100%;
-    padding: 10px;
-    margin-right: 30px;
+#city-name {
+    font-size: 50px;
 }
 
-
-.forecast {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-width: fit-content;
+.forecast-date {
+    font-size: 18px;
 }
-
-.card {
-    height: 240px;
-    width: 200px;
-    padding: 5px;
-    margin: 5px;
-    justify-content: center;
-}
- */
