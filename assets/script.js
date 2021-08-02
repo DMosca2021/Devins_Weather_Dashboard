@@ -13,8 +13,8 @@ let cityHumid = document.querySelector("#humidity");
 let cityUv = document.querySelector("#uvIndex");
 
 function searchWeather(cityName) {
-    let queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIkey;
-    fetch(queryURL)
+    let queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIkey;
+    fetch(queryUrl)
         .then(function(response){
             console.log(response);
 
@@ -27,6 +27,20 @@ function searchWeather(cityName) {
             const year = currentDate.getFullYear();
 
             currentCity.innerHTML = response.data.name + " (" + month + "/" + day + "/" + year + ") ";
+            cityTemp.innerHTML = "Temperature: " + k2f(response.data.main.temp) + " &#176F";
+            cityWind.innerHTML = "Wind Speed: " + response.data.wind.speed + " mph";
+            cityHumid.innerHTML = "Humidity: " + response.data.main.humidity + "%";
+
+            let lat = response.data.coord.lat;
+            let lon = response.data.coord.lon;
+            let uvQueryUrl = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + lat + "&lon=" + lon + "&appid=" + APIkey + "&cnt=1";
+            fetch(uvQueryUrl)
+            .then(function(response){
+                cityUv.innerHTML = "UV Index: " + response.data[0].value;
+            });
+
+            let cityID = response.data.id;
+            let forecastQueryUrl = "https://api.openweathermap.org/data/2.5/forecast?id=" + cityID + "&appid=" + APIkey;
             
         })
 };
