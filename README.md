@@ -32,4 +32,4 @@ Links to access the weather dashboard:
 
 Click on deployed link. Once at the weather dashboard, input a city name into the search bar to recieve the current weather data and 5 day forecast. 
 
-![Screenshot](./assets.images/weatherDash_scrnsht.png)
+![Screenshot](./assets/images/weatherDash_scrnsht.png)
