@@ -1,7 +1,8 @@
 console.log("Welcome to the weather");
 console.log("<-------++++++------->");
-
+// API key obtained from openweathermap.org
 const APIkey = "76cc07c4bbc6bedc0eceb1791bd17796";
+
 let inputEl = document.querySelector("#city-input");
 let searchBtn = document.querySelector("#button-addon2");
 let histEL = document.querySelector("#search-history");
@@ -11,6 +12,9 @@ let cityTemp = document.querySelector("#temp");
 let cityWind = document.querySelector("#wind-speed");
 let cityHumid = document.querySelector("#humidity");
 let cityUv = document.querySelector("#uvIndex");
+
+let searchHist = JSON.parse(localStorage.getItem("search")) || [];
+console.log(searchHist);
 
 function searchWeather(cityName) {
     let queryUrl = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + APIkey;
@@ -68,3 +72,9 @@ function searchWeather(cityName) {
 
         })
 };
+
+searchBtn.addEventListener("click", function() {
+    let searchedCity = inputEl.value;
+    searchWeather(searchedCity);
+
+})
