@@ -21,9 +21,9 @@
 
   <main>
 
-    <section class="current-city">
-      <div class="search-bar">
-        <div class="col-4 bg-light">
+    <section class="col-12 current-city">
+      <div class="row p-5 search-bar">
+        <div class="col-4 p-5 bg-light">
           <p class="search-header my-1">Search your city</p>
             <div class="input-group mb-3">
               <input id="city-input" type="text" class="form-control" placeholder="Enter city name" aria-label="Enter city name">
@@ -35,8 +35,8 @@
               <form id="search-history"></form>
         </div>
       </div>
-      <div class="row current-weather">
-          <div class="col-8 jumbotron">
+      <div class="row p-5 current-weather">
+          <div class="col-6 p-5 jumbotron">
             <h1 class="display-4" id="city-name">Current City:</h1>
               <p class="col-3" id="temp"></p>
               <hr class="my-4">
@@ -45,22 +45,21 @@
               <p class="col-3" id="humidity">Humidity:</p>
               <hr class="my-4">
               <p class="col-3" id="uvIndex">UV Index:</p>
-              <a class="btn btn-primary btn-lg" href="#" role="button">Refresh</a>
           </div>
     </div>
     </section>
 
     <section class="forecast-cards">
-      <div class="row">
+      <div class="row ml-10">
         <div class="col-12">
           <h3>5-Day Forecast</h3>
         </div>
         <div class="row">
-          <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-          <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-          <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-          <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
-          <div class="col forecast bg-primary text-white ml-3 mb-3 rounded"></div>
+          <div class="col forecast bg-light text-black ml-3 mb-3 rounded"></div>
+          <div class="col forecast bg-light text-black ml-3 mb-3 rounded"></div>
+          <div class="col forecast bg-light text-black ml-3 mb-3 rounded"></div>
+          <div class="col forecast bg-light text-black ml-3 mb-3 rounded"></div>
+          <div class="col forecast bg-light text-black ml-3 mb-3 rounded"></div>
         </div>
       </div>
     </section>
