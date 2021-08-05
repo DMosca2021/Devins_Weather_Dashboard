@@ -8,6 +8,7 @@ let searchBtn = document.querySelector("#search-button");
 let histEL = document.querySelector("#search-history");
 let clearHist = document.querySelector("#clear-history");
 let currentCity = document.querySelector("#city-name");
+let cityIcon = document.querySelector("#current-icon");
 let cityTemp = document.querySelector("#temp");
 let cityWind = document.querySelector("#wind-speed");
 let cityHumid = document.querySelector("#humidity");
@@ -30,7 +31,6 @@ function searchWeather(cityName) {
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1;
             const year = currentDate.getFullYear();
-
             currentCity.innerHTML = data.name + " (" + month + "/" + day + "/" + year + ") ";
             cityTemp.innerHTML = "Temperature: " + convertTemp(data.main.temp) + " &#176F";
             cityWind.innerHTML = "Wind Speed: " + data.wind.speed + " mph";
@@ -108,8 +108,7 @@ function showSearchHist() {
     histEL.innerHTML = "";
     for (let index = 0; index < searchHist.length; index++) {
         const histItem = document.createElement("input");
-        histItem.setAttribute("type", "text");
-        histItem.setAttribute("readonly", true);
+        histItem.setAttribute("type", "button");
         histItem.setAttribute("class", "form-control d-block bg-white");
         histItem.setAttribute("value", searchHist[index]);
         histItem.addEventListener("click", function() {
