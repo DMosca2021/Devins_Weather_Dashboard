@@ -31,6 +31,12 @@ function searchWeather(cityName) {
             const day = currentDate.getDate();
             const month = currentDate.getMonth() + 1;
             const year = currentDate.getFullYear();
+            const weatherIcon = data.weather[0].icon;
+            console.log(weatherIcon);
+            const weatherImage = document.querySelector("#weather-image")
+            weatherImage.setAttribute("style", "background-color: #3770c9")
+            weatherImage.setAttribute("src", "http://openweathermap.org/img/wn/" + weatherIcon + "@2x.png"
+            );
             currentCity.innerHTML = data.name + " (" + month + "/" + day + "/" + year + ") ";
             cityTemp.innerHTML = "Temperature: " + convertTemp(data.main.temp) + " &#176F";
             cityWind.innerHTML = "Wind Speed: " + data.wind.speed + " mph";
@@ -46,6 +52,16 @@ function searchWeather(cityName) {
             })
             .then(function (data) {
                 cityUv.innerHTML = "UV Index: " + data[0].value;
+                console.log(data[0].value);
+                if (data[0].value <= 3) {
+                    cityUv.setAttribute("style", "background-color: green")
+                } else if (data[0].value > 3 || data[0].value <= 6) {
+                    cityUv.setAttribute("style", "background-color: yellow")
+                } else if (data[0].value > 6 || data[0].value < 9) {
+                    cityUv.setAttribute("style", "background-color: orange")
+                } else if (data[0].value >= 9) {
+                    cityUv.setAttribute("style", "background-color: red")
+                }
             })
 
             let cityID = data.id;
@@ -73,13 +89,12 @@ function searchWeather(cityName) {
                         forecastCards[index].append(forecastCardTemp);
                         const forecastCardWind = document.createElement("p");
                         forecastCardWind.innerHTML = "Wind Speed: " + data.list[forecastIndex].wind.speed + " mph";
+                        forecastCards[index].append(forecastCardWind);
                         const forecastCardHumid = document.createElement("p");
                         forecastCardHumid.innerHTML = "Humidity: " + data.list[forecastIndex].main.humidity + "%";
                         forecastCards[index].append(forecastCardHumid);
-                        
                     }
                 })
-
         })
 };
 
