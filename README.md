@@ -29,7 +29,7 @@ SO THAT I can plan a trip accordingly
 Links to access the weather dashboard:
 
 - [Repo Link](https://github.com/DMosca2021/dm_hmwk_wk6_weatherApp)
-- [Deployed Link](https://dmosca2021.github.io/dm_hmwk_wk6_weatherApp/)
+- [Deployed Link](https://dmosca2021.github.io/Devins_Weather_Dashboard/)
 
 Click on deployed link. Once at the weather dashboard, input a city name into the search bar to recieve the current weather data and 5 day forecast. 
 
